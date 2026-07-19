@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap');
 
+/* --- NATIVE SMOOTH SCROLL INTEGRATION --- */
+html {
+    scroll-behavior: smooth;
+}
+
 :root{
     --bg-main: #05060f;
     --text-main: #E0E3FF;
@@ -35,7 +40,7 @@ body{
 }
 
 h1,h2,h3,h4{
-    font-family:"Climate Crisis",sans-serif;
+    font-family:"Climate Crisis", sans-serif, system-ui;
     line-height: 1.2;
     word-break: break-word;
 }
@@ -63,7 +68,7 @@ h1,h2,h3,h4{
 }
 
 .logo-text{
-    font-family: "Climate Crisis",sans-serif;
+    font-family: "Climate Crisis", sans-serif, system-ui;
     font-size: 1.6rem;
     color:white;
     line-height: 0.8;
@@ -111,19 +116,26 @@ h1,h2,h3,h4{
     text-align: center;
     padding:120px 40px;
     background-color: #f0f0ff;
+    position: relative;
 }
 
 .badge{
     display:inline-flex;
     align-items: center;
     background-color: white;
-    border :1px solid rgb(225,198,225);
+    border: 1px solid rgb(225,198,225);
     border-radius: 100px;
-    padding:10px 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
+    padding: 12px 28px; 
+    margin-bottom: 56px; 
+}
+
+.badge h3 {
+    font-family: 'Outfit', sans-serif !important; 
+    font-size: 1.45rem !important; 
+    font-weight: 800 !important; 
     color: var(--primary);
-    margin-bottom: 32px;
+    margin: 0;
+    letter-spacing: -0.02em;
 }
 
 .hero h1{
@@ -178,31 +190,31 @@ h1,h2,h3,h4{
 
 .floating-card{
     position:absolute;
-    width: 320px;
+    width: 340px;
     background-color: white;
     padding:14px;
     border-radius:36px;
     border:1px solid #e5e7eb;
     overflow: hidden;
+    top: calc(50% + 40px);
+    transform: translateY(-50%);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .floating-card img{
     width: 100%;
     height: auto;
-    aspect-ratio: 1/1;
+    aspect-ratio: 16/9; 
     object-fit:cover;
     border-radius: 24px;
-    background-color: grey;
 }
 
 .card-left{
     left:40px;
-    top:50%;
 }
 
 .card-right{
     right: 40px;
-    bottom: 45%;
 }
 
 .main-footer {
@@ -269,10 +281,6 @@ h1,h2,h3,h4{
     font-weight: 500;
 }
 
-/* ==========================================================================
-   TEACHER FLOW SECTION STYLES
-   ========================================================================== */
-
 .teacher-flow {
     padding: 120px 80px;
 }
@@ -328,10 +336,6 @@ h1,h2,h3,h4{
     display: block;
 }
 
-/* ==========================================================================
-   FEATURES SECTION STYLES 
-   ========================================================================== */
-
 .features {
     padding: 120px 80px;
     background-color: white;
@@ -382,10 +386,6 @@ h1,h2,h3,h4{
     margin: 0 auto 30px;
     font-size: 2.5rem;
 }
-
-/* ==========================================================================
-   TECH STACK SECTION STYLES
-   ========================================================================== */
 
 .tech-stack {
     padding: 80px 40px;
@@ -634,4 +634,3 @@ h1,h2,h3,h4{
         height: auto;
     }
 }
-
