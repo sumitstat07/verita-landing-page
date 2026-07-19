@@ -101,7 +101,8 @@ Bash
 python app.py
 The routing interface will expose a local runtime boundary at http://127.0.0.1:5000.
 
-📈 Engineering Commit Integrity
+## 📈 Engineering Commit Integrity:
+
 This codebase utilizes the Conventional Commits engineering standard to preserve clear operational workflows:
 
 feat(cv): Implementation additions regarding Face ID or image evaluation code blocks.
